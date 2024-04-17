@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Contact | Foundation Sixty6</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+
+
+<body data-page="contact" id="contact">
+<div class="grid" id="app">
+
+    <header>
+        <topbuttoncomp></topbuttoncomp>
+
+        <headercomp></headercomp>
+        <div class="hero-box" 
+        :style="{ 'background-size': backgroundImageSize,'background-position': `center ${backgroundPositionY}`, opacity: backgroundOpacity }"
+        
+        
+        >
+            <div class="hero-sub">
+
+            <div class="media-block">
+                <img src="resources/svg/logo.svg"/>
+                <h2>Contact Us</h2>
+            </div>
+
+            <div class="text-block">
+                <p>
+                    You can find contact info below, and contact forms for expedited inquiries.
+                </p>            
+            </div>
+            </div>
+        </div>
+
+    </header>
+    <div id="main-content" class="main-content-block bg-white">
+        <!-- build page in here -->
+
+        <section class="formsComp">
+
+                    <contactformscomp></contactformscomp>
+
+        </section>
+
+        <div class="svg-section flip bg-yellow">
+            <svg class="editorial svg-flip fill-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28 "
+                        preserveAspectRatio="none">
+                    <defs>
+                    <path id="gentle-wave"
+                    d="M-160 44c30 0 
+                       58-18 88-18s
+                       58 18 88 18 
+                       58-18 88-18 
+                       58 18 88 18
+                       v44h-352z" />
+                     </defs>
+                       <g class="parallax4">
+                      <use xlink:href="#gentle-wave" x="50" y="6" />  
+                     </g>
+            </svg></div>
+            <section class="section-pad bg-yellow">
+                <div class="big-contact-card edge-yellow">
+            
+                <div class="big-image">
+                    <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill="#000000" fill-rule="evenodd" d="M10 3a7 7 0 100 14 7 7 0 000-14zm-9 7a9 9 0 1118 0 9 9 0 01-18 0zm8-4a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm.01 8a1 1 0 102 0V9a1 1 0 10-2 0v5z"></path> </g></svg>                </div>
+            
+                <ul class="big-text">
+                  <li class="logoImage">
+                  <!-- <h2 class="brick-text-black color-white">Foundation Sixty6</h2> -->
+                  <img src="resources/svg/logo.svg">
+                  </li>
+            
+                <li>
+                <img src="resources/svg/loc.svg" />
+                <h3>London, Ontario, Canada</h3>
+                </li>
+            
+                <li>
+                <img src="resources/svg/email.svg" />
+                <h3>info@foundation.com</h3>
+                </li>
+            
+                <li>
+                <img src="resources/svg/phone.svg" />
+                <h3>1 800 000 0000</h3>
+                </li>
+            
+                
+              </ul>
+                </div>
+            </section>
+
+
+            <div class="svg-section flip bg-pink">
+                <svg class="editorial svg-flip fill-yellow"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 24 150 28 "
+                            preserveAspectRatio="none">
+                        <defs>
+                        <path id="gentle-wave"
+                        d="M-160 44c30 0 
+                           58-18 88-18s
+                           58 18 88 18 
+                           58-18 88-18 
+                           58 18 88 18
+                           v44h-352z" />
+                         </defs>
+                           <g class="parallax4">
+                          <use xlink:href="#gentle-wave" x="50" y="6" />  
+                         </g>
+                </svg></div>
+        <section class="contact-component bg-pink">
+        <contactcardscomp></contactcardscomp>
+        </section>
+
+
+
+        <svg class="editorial fill-dark"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 "
+        preserveAspectRatio="none">
+    <defs>
+    <path id="gentle-wave"
+    d="M-160 44c30 0 
+       58-18 88-18s
+       58 18 88 18 
+       58-18 88-18 
+       58 18 88 18
+       v44h-352z" />
+     </defs>
+     <g class="parallax1">
+      <use xlink:href="#gentle-wave" x="50" y="3" fill="#479a9e"/>
+     </g>
+       <g class="parallax2">
+      <use xlink:href="#gentle-wave" x="50" y="0" fill="#eb745e"/>
+       </g>
+         <g class="parallax3">
+      <use xlink:href="#gentle-wave" x="50" y="9" fill="#fac650"/>
+      </g>
+       <g class="parallax4">
+      <use xlink:href="#gentle-wave" x="50" y="6" fill=""/>  
+     </g>
+           </svg>
+        </div>
+        <footercomp></footercomp>
+
+</div>
+</body>
+</html>

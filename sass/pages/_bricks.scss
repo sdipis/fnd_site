@@ -1,0 +1,363 @@
+@use '../abstracts' as a;
+
+//crane
+
+.brick-popper{
+  .close-bricks{
+    margin-right:20px;
+  }
+  box-shadow:a.$shad;
+  height:fit-content;
+  width:fit-content;
+  background-color: white;
+  position: fixed;
+  bottom:40px;
+  left:40px;
+  padding:20px;
+  z-index: 99;
+  display: flex;
+  padding-right:60px;
+  border-radius: 0px 0px 25px 0px;
+  
+  .brickText{
+    position: relative;
+    max-width:30vw;
+    h2{
+      font-size: 1rem !important;
+      line-height:1.5rem;
+    }
+    svg{
+      position: absolute;
+      bottom:0px;
+      left:0px;
+      height:100%;
+      z-index: 0;
+      opacity: .5;
+      transition:opacity .2s ease;
+      &:hover{
+        opacity:1;
+      }
+    }
+  }
+
+
+}
+
+#crane {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+#base {
+  width: 100px;
+  height: 20px;
+  background-color: #333;
+  position: absolute;
+  bottom: 20px;
+  left: 150px;
+  transform-origin: 50% 100%;
+}
+
+#arm {
+  width: 20px;
+  height: 200px;
+  background-color: #666;
+  position: absolute;
+  bottom: 40px;
+  left: 190px;
+  transform-origin: 50% 100%;
+}
+
+#hook {
+  width: 20px;
+  height: 40px;
+  background-color: #999;
+  position: absolute;
+  bottom: 240px;
+  left: 190px;
+  transform-origin: 50% 0%;
+}
+
+#brick {
+  width: 40px;
+  height: 20px;
+  background-color: #ff0000;
+  position: absolute;
+  bottom: 280px;
+  left: 185px;
+  transform-origin: 50% 50%;
+}
+
+//modal
+#brickModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.behindHead{
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width: 100%;
+  display: flex;
+  transform: scale(.5);
+  opacity: 0;
+  transform:translatey(-40px) translatex( -15px);
+  
+}
+
+.brick-info{
+  width:40%;
+  background-color: a.$white;
+  height:auto;
+  z-index: 5;
+  padding:20px !important;
+  h2{
+    font-size: 2rem;
+    color:a.$black;
+    padding-bottom: 12px;
+    font-weight: 600;
+  }
+  h3{
+    font-size: 1.5rem;
+    color:a.$black;
+    padding-bottom:10px;
+  }
+  p{
+    padding-bottom:10px;
+  }
+}
+
+.brick-block{
+  justify-content: flex-start;
+  h2{
+    text-align: left;
+    padding-left:0px;
+  }
+&::before{
+
+  background-image: url('../images/bricks/laying_bricks.jpg') !important;
+}
+}
+
+.bricksGrad{
+background: a.$white;
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, a.$blue 100%) !important;
+}
+
+.brick-socials{
+flex:0 0 50%;
+max-width: 50%;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(100vh) scale(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-20vh) scale(1);
+    opacity: 0;
+  }
+}
+.heroBox{
+  position: relative;
+}
+.heroBoxWrap{content: ''; height:100%;width:100%;position:absolute; top:0px;
+left:0px; z-index: -4; overflow: hidden;}
+.floating-svg {
+  position: absolute;
+  animation: floatUp linear infinite;
+  animation-duration: var(--duration);
+  animation-delay: var(--delay);
+  transform-origin: center;
+}
+
+.svg-container {
+  width: 100px;
+  height: 100px;
+  opacity: 0;
+  animation: fadeIn 1s 1s forwards; /* 2s delay before opacity becomes 1 */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.brick {
+    width: 100px; /* Twice the width for 1x2 aspect ratio */
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    opacity: 0; /* Initially hidden */
+    margin:5px;
+    display: flex;
+    cursor: pointer;
+     border-radius: 5px;
+     transition: .2s;
+     font-family: a.$main-font;
+
+     &:hover{
+      transform:scale(1.1);
+      box-shadow:0px 0px 10px rgba(0, 0, 0, 0.199);
+     }
+  }
+  .brickTitle{
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+.brickContainer{
+    display: flex;
+    width:100vw;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left:0;
+    right:0;
+}
+  .brickBox{
+    // background-color: red;
+    height:auto;
+    padding-top:40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    top:0;
+    left:0;
+    font-weight: bold;
+  }
+
+  .yellow { background-color: a.$lightpink; }
+  .blue { background-color: a.$blue; }
+  .pink { background-color: a.$pink; }
+  .green { background-color: a.$lightblue; }
+  .dark { background-color: a.$darkblue; }
+
+  //waves
+
+  .parallax-wave {
+    position: relative;
+    height: 100vh;
+    perspective: 1px; /* Create a 3D perspective */
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+
+  .wave-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 50%;
+    background-repeat: repeat-x;
+    background-size: cover;
+  }
+
+  .topWave {
+    animation: animateWave 15s linear infinite alternate;
+    z-index: 3;
+  }
+
+  .midWave {
+    animation: animateWave 12s linear infinite alternate;
+    z-index: 2;
+  }
+
+  .botWave {
+    animation: animateWave 20s linear infinite alternate;
+    z-index: 1;
+  }
+
+  @keyframes animateWave {
+    0% {
+      transform: scaley(1);
+    }
+    100% {
+      transform: scaley(1.15);
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    .brick-popper{
+      .close-bricks{
+        margin-right:20px;
+      }
+      height:fit-content;
+      width:100vw;
+      background-color: white;
+      position: fixed;
+      bottom:0px;
+      left:0px;
+      padding:20px;
+      z-index: 101;
+      display: flex;
+      padding-right:20px;
+      border-radius:0px;
+      
+      .brickText{
+        position: relative;
+        max-width:100vw;
+        h2{
+          font-size: 1rem !important;
+          line-height:1.5rem;
+        }
+        svg{
+          position: absolute;
+          bottom:0px;
+          left:0px;
+          height:100%;
+          z-index: 0;
+          opacity: .5;
+        }
+      }
+    
+    
+    }
+    
+
+    /* Add your responsive styles for smaller screens here */
+    .brick {
+        width: auto; /* Adjust the width for smaller screens */
+        height: auto; /* Adjust the height for smaller screens */
+        padding: 5px 10px;
+      font-size: clamp(.25rem,1vw,.5rem);
+
+    }
+}
+    
+
+.square-button {
+  width: 100px; /* Set your desired width */
+  height: 100px; /* Set your desired height */
+  background-color: #3498db; /* Set your desired background color */
+  border: none;
+  color: #fff; /* Set your desired text color */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  transition-duration: 0.3s;
+}
+
+.square-button:hover {
+  transform: skew(20deg); /* Adjust the skew angle to create an abstract rectangle effect */
+}
+

@@ -1,0 +1,81 @@
+@use '../abstracts' as a;
+
+.card-stack{
+    display: flex;
+    justify-content: space-between;
+    .card{
+        flex:1 0 30%;
+        max-width: 30%;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0px 0px 25px 0px;
+        img{
+            padding:10% 25%;
+        }
+        h2{
+            font-weight: bold;
+        }
+        a{
+            width:100%;
+            font-size: .85rem;
+            padding:20px;
+            // border-radius: 0px 0px 25px 25px;
+        }
+        .card-details{
+            padding:20px 40px;
+            flex-basis: 100%;
+            
+            }
+    
+    }
+}
+.conditions-stack{
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    .card{
+        background-color: transparent;
+        .card-details{
+            li{
+                display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            font-weight: bold;
+            h2{
+                background-color: a.$darkblue;
+                overflow: visible;
+
+            }
+            p{
+                width:100%;
+                margin-bottom: 10px;
+            }
+            }
+        }
+        img{
+            height:300px;
+        }
+        flex:1 0 30%;
+        max-width: 30%;
+        // &:nth-child(even){
+        //     background-color: rgb(236, 236, 236);
+        // }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+
+
+    .card-stack{
+        flex-flow: column;
+        .card{
+            max-width: 100%;
+            flex:1 0 100%;
+            margin-bottom: 40px;
+        }
+    }
+
+}

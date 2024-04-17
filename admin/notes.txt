@@ -1,0 +1,17 @@
+Home page
+
+-hero needs update
+--left float the message
+--right float the images 
+
+-about page
+--
+
+-subscribe to our mailing list
+-get help now
+-social media
+-site updates based on link in gc
+-bricks good
+
+-change header images
+-add lumen funct

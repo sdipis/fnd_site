@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Foundation Sixty6</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script defer src="js/modules/logoani.js"></script>
+
+</head>
+
+
+<body data-page="home" id="home">
+   <div class="main-wrapper" id="app">
+    <div class="color-blocks">
+      <div class="yellow"></div>
+      <div class="pink"></div>
+      <div class="green"></div>
+      <div class="blue"></div>
+      <div class="dark"></div>
+    </div>
+
+    <transition name="brick" appear> 
+    <brickadcomp></brickadcomp>
+    </transition>
+
+
+      <topbuttoncomp></topbuttoncomp>
+    
+      <header>
+      <!-- headcomp includes topbar/menu -->
+      <transition name="fade">
+      <headercomp></headercomp>
+      </transition>
+
+      <div class="hero-box"
+      :style="{ 'background-size': backgroundImageSize,'background-position': `center ${backgroundPositionY}`, opacity: backgroundOpacity }"
+      >
+         <div class="hero-sub">
+
+         <div class="media-block">
+<svg id="Layer_8" class="logo-svg" data-name="Layer 8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.65 126.21">
+  <path class="logo-black" d="M341.71,106.64c0-5.14,1.26-9.67,3.8-13.59l16.36-25.68h-97.7v5.89h-7.62v-5.89h-43.98v58.84h106.23l2.9-11.38-6.6-36.62h7.7l2.99,22.79,5.19-22.79h7.7l-12.24,48h24.96c-1.11-.76-2.17-1.62-3.16-2.61-4.35-4.37-6.53-10.03-6.53-16.96ZM250.62,90.16h-7.61v-2.96c0-2.03-1.12-3.05-3.34-3.05s-3.31,1.02-3.31,3.05v.37c0,2.17,2.37,4.71,7.13,7.61,4.76,2.89,7.13,6.4,7.13,10.55v.52c0,6.3-3.64,9.45-10.93,9.45s-10.95-3.15-10.95-9.45v-2.98h7.62v2.98c0,2.02,1.1,3.04,3.31,3.05h.05c2.19,0,3.29-1.01,3.29-3.05v-.39c0-2-2.38-4.45-7.14-7.36-4.75-2.89-7.13-6.35-7.13-10.38v-.92c0-6.31,3.64-9.47,10.93-9.47,7.3.01,10.95,3.17,10.95,9.47v2.96ZM264.17,114.97h-7.62v-36.76h7.62v36.76ZM292.89,114.97h-7.51l-4.82-10.34-4.84,10.34h-7.52l8.59-18.39-8.59-18.37h7.52l4.84,10.34,4.82-10.34h7.51l-8.59,18.37,8.59,18.39ZM313.16,83.99h-5.44v30.98h-7.61v-30.98h-5.44v-5.78h5.44v-8.21h7.61v8.21h5.44v5.78Z"/>
+  <g>
+    <path class="logo-black" d="M30.93,11.17H10.21v12.28h20.13v9.77H10.21v19.98H0V1.41h30.93v9.77Z"/>
+    <path class="logo-black" d="M69.49,48.58c-3.8,3.77-8.44,5.66-13.91,5.66s-10.1-1.89-13.88-5.66-5.66-8.4-5.66-13.88,1.89-10.1,5.66-13.88c3.77-3.77,8.4-5.66,13.88-5.66s10.11,1.89,13.91,5.66c3.8,3.77,5.7,8.4,5.7,13.88s-1.9,10.1-5.7,13.88ZM48.43,42.03c1.9,1.92,4.28,2.89,7.14,2.89s5.25-.96,7.18-2.89c1.92-1.92,2.89-4.37,2.89-7.33s-.96-5.4-2.89-7.33c-1.92-1.92-4.32-2.89-7.18-2.89s-5.24.96-7.14,2.89c-1.9,1.92-2.85,4.37-2.85,7.33s.95,5.4,2.85,7.33Z"/>
+    <path class="logo-black" d="M106.34,16.21h9.55v37h-9.55v-4.14c-2.32,3.45-5.99,5.18-11.03,5.18-4.05,0-7.39-1.36-10.03-4.07-2.64-2.71-3.96-6.46-3.96-11.25v-22.72h9.55v21.53c0,2.47.67,4.35,2,5.66,1.33,1.31,3.11,1.96,5.33,1.96,2.47,0,4.44-.76,5.92-2.29,1.48-1.53,2.22-3.82,2.22-6.88v-19.98Z"/>
+    <path class="logo-black" d="M145.19,15.17c4.04,0,7.39,1.36,10.03,4.07,2.64,2.71,3.96,6.46,3.96,11.25v22.72h-9.55v-21.53c0-2.47-.67-4.35-2-5.66-1.33-1.31-3.11-1.96-5.33-1.96-2.47,0-4.44.77-5.92,2.29-1.48,1.53-2.22,3.82-2.22,6.88v19.98h-9.55V16.21h9.55v4.14c2.32-3.45,5.99-5.18,11.03-5.18Z"/>
+    <path class="logo-black" d="M195.36,1.41h9.55v51.8h-9.55v-4.37c-2.81,3.6-6.81,5.4-11.99,5.4s-9.24-1.89-12.76-5.66c-3.53-3.77-5.29-8.4-5.29-13.88s1.76-10.1,5.29-13.88c3.53-3.77,7.78-5.66,12.76-5.66s9.18,1.8,11.99,5.4V1.41ZM177.78,42.22c1.95,1.95,4.4,2.92,7.36,2.92s5.4-.97,7.33-2.92c1.92-1.95,2.89-4.45,2.89-7.51s-.96-5.56-2.89-7.51c-1.92-1.95-4.37-2.92-7.33-2.92s-5.42.97-7.36,2.92c-1.95,1.95-2.92,4.45-2.92,7.51s.97,5.56,2.92,7.51Z"/>
+    <path class="logo-black" d="M241.76,16.21h9.55v37h-9.55v-4.37c-2.86,3.6-6.88,5.4-12.06,5.4s-9.16-1.89-12.69-5.66c-3.53-3.77-5.29-8.4-5.29-13.88s1.76-10.1,5.29-13.88,7.76-5.66,12.69-5.66c5.18,0,9.2,1.8,12.06,5.4v-4.37ZM224.14,42.22c1.92,1.95,4.37,2.92,7.33,2.92s5.41-.97,7.36-2.92,2.92-4.45,2.92-7.51-.97-5.56-2.92-7.51c-1.95-1.95-4.4-2.92-7.36-2.92s-5.4.97-7.33,2.92c-1.92,1.95-2.89,4.45-2.89,7.51s.96,5.56,2.89,7.51Z"/>
+    <path class="logo-black" d="M281.12,25.38h-8.36v15.39c0,1.28.32,2.22.96,2.81.64.59,1.58.92,2.81,1,1.23.07,2.76.06,4.59-.04v8.66c-6.56.74-11.19.12-13.88-1.85-2.69-1.97-4.03-5.5-4.03-10.58v-15.39h-6.44v-9.18h6.44v-7.47l9.55-2.89v10.36h8.36v9.18Z"/>
+    <path class="logo-black" d="M292.59,11.77c-1.58,0-2.95-.58-4.11-1.74-1.16-1.16-1.74-2.53-1.74-4.11s.58-2.96,1.74-4.14c1.16-1.18,2.53-1.78,4.11-1.78s3.02.59,4.18,1.78c1.16,1.18,1.74,2.57,1.74,4.14s-.58,2.95-1.74,4.11-2.55,1.74-4.18,1.74ZM287.86,53.21V16.21h9.55v37h-9.55Z"/>
+    <path class="logo-black" d="M337.66,48.58c-3.8,3.77-8.44,5.66-13.91,5.66s-10.1-1.89-13.88-5.66c-3.77-3.77-5.66-8.4-5.66-13.88s1.89-10.1,5.66-13.88c3.77-3.77,8.4-5.66,13.88-5.66s10.11,1.89,13.91,5.66,5.7,8.4,5.7,13.88-1.9,10.1-5.7,13.88ZM316.61,42.03c1.9,1.92,4.28,2.89,7.14,2.89s5.25-.96,7.18-2.89c1.92-1.92,2.89-4.37,2.89-7.33s-.96-5.4-2.89-7.33c-1.92-1.92-4.32-2.89-7.18-2.89s-5.24.96-7.14,2.89c-1.9,1.92-2.85,4.37-2.85,7.33s.95,5.4,2.85,7.33Z"/>
+    <path class="logo-black" d="M370.66,15.17c4.04,0,7.39,1.36,10.03,4.07,2.64,2.71,3.96,6.46,3.96,11.25v22.72h-9.55v-21.53c0-2.47-.67-4.35-2-5.66-1.33-1.31-3.11-1.96-5.33-1.96-2.47,0-4.44.77-5.92,2.29-1.48,1.53-2.22,3.82-2.22,6.88v19.98h-9.55V16.21h9.55v4.14c2.32-3.45,5.99-5.18,11.03-5.18Z"/>
+  </g>
+
+  
+  <path class="logo-yellow" d="M156.24,67.14h38.95v16.38h-38.95v-16.38Z"/>
+  <path class="logo-pink" d="M117.29,67.14h38.95v16.38h-38.95v-16.38Z"/>
+  <path class="logo-green" d="M78.34,67.14h38.95v16.38h-38.95v-16.38Z"/>
+  <path class="logo-blue" d="M39.38,67.14h38.95v16.38h-38.95v-16.38Z"/>
+  <path class="logo-dark" d="M.43,67.14h38.95v16.38H.43v-16.38Z"/>
+
+
+  <polygon class="logo-black" points="381.34 61.34 377.17 67.37 361.87 67.37 365.92 61.34 381.34 61.34"/>
+  <path class="logo-black" d="M375.99,106.64c0,3.34-1.03,6-3.1,7.99-2.07,2-4.65,2.99-7.74,2.99s-5.65-.99-7.69-2.99c-2.04-1.99-3.06-4.65-3.06-7.99s1.02-5.99,3.06-7.95c2.04-1.96,4.6-2.94,7.69-2.94s5.67.99,7.74,2.98c2.07,2,3.1,4.63,3.1,7.91Z"/>
+  <path class="logo-black" d="M382.11,123.55c-1.01,1.01-2.09,1.89-3.22,2.66h4.84v-4.52c-.5.64-1.03,1.26-1.62,1.86Z"/>
+  <path class="logo-black" d="M383.73,67.44l-6.56-.08-11.38,15.26c6.7.61,12.03,3.22,15.95,7.81.76.88,1.4,1.81,1.99,2.77v-25.76Z"/>
+</svg>             
+
+
+        <h2>Brick by Brick,</h2>
+         </div>
+
+         <div class="text-block">
+             <p>
+                 We are laying the foundation for a brighter tomorrow, 
+                 for people aged 16-25, suffering from schizophrenia, 
+                 bi-polar, psychosis in South-Western Ontario.
+             </p>            
+         </div>
+     </div>
+     </div>
+    </header>
+    
+    <div id="main-content" class="main-content-block">
+
+                       <!-- mission box (1) -> here down  -->
+                       <!-- <section id="mission" class="bg-blue section-pad">
+                        <missioncomp></missioncomp>
+                        </section> -->
+
+
+
+
+         <!-- anim SVG start (above conditions section)-->
+         <!-- <div class="svg-section flip bg-yellow">
+                     <svg class="editorial svg-flip fill-blue"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 24 150 28 "
+                     preserveAspectRatio="none">
+                 <defs>
+                 <path id="gentle-wave"
+                 d="M-160 44c30 0 
+                    58-18 88-18s
+                    58 18 88 18 
+                    58-18 88-18 
+                    58 18 88 18
+                    v44h-352z" />
+                  </defs>
+                    <g class="parallax4">
+                   <use xlink:href="#gentle-wave" x="50" y="6" />  
+                  </g>
+         </svg></div> -->
+
+         <section>
+         <div class="big-blurb color-black bg-white">
+
+          <h2 class="blurb-title brick-text-blue color-white">
+            We're tackling mental health head-on.
+          </h2>
+
+            <h2 class="blurb-text">
+            Foundation Sixty6 aims to bridge the <span>gap in resources</span> faced by youth and young adults suffering from:
+            </h2>
+
+            <h3 class="brick-text-green">Bipolar</h3>
+            <h3 class="brick-text-green">Schizophrenia</h3>
+            <h3 class="brick-text-green">Psychosis</h3>
+
+            </div>
+            </section>
+
+
+               <!-- <div class="svgWrapper">
+                <svg class="svgBg fill-yellow bg-white" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 118" preserveAspectRatio="none">
+                   <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+               </svg>
+    </div> -->
+
+               <!-- <div class="big-blurb color-black bg-yellow">
+                <h2>
+                  For an optimal success with most mental illnesses: <br><span>early detection</span>, <br><span>early diagnosis</span>, and <br><span>early treatment</span> are key.                </h2>
+                </div> -->
+
+
+         <!-- anim SVG start (below roadmap section) -->
+         <div class="svg-section flip bg-yellow">
+            <svg class="editorial svg-flip fill-white"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28 "
+                        preserveAspectRatio="none">
+                    <defs>
+                    <path id="gentle-wave"
+                    d="M-160 44c30 0 
+                       58-18 88-18s
+                       58 18 88 18 
+                       58-18 88-18 
+                       58 18 88 18
+                       v44h-352z" />
+                     </defs>
+                       <g class="parallax4">
+                      <use xlink:href="#gentle-wave" x="50" y="6" />  
+                     </g>
+            </svg></div>
+        <section class="formsComp bg-yellow">
+         <div class="forms-top-comp">
+             <contactformscomp></contactformscomp>
+
+             <!-- <div class="forms-aside">
+                 <svg class="margin-bottom-20" height="80px" width="80px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                 <h2>Whether you are a prospective:</h2>
+                 <ul class="color-black">
+                     <li><p>>Partner</p></li>
+                     <li><p>>Patient</p></li>
+                     <li><p>>Volunteer</p></li>
+                     <li><p>>Other</p></li>
+                 </ul>
+
+                 <h3>We look forward to hearing from you</h3> 
+                 <p>Anybody can contact us with any questions, concerns, or suggestions. We implore it.</p>
+                 </div>
+         </div> -->
+     </section>
+
+
+
+         <!-- anim SVG start (below roadmap section) -->
+         <div class="svg-section flip bg-pink">
+            <svg class="editorial svg-flip fill-yellow"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28 "
+                        preserveAspectRatio="none">
+                    <defs>
+                    <path id="gentle-wave"
+                    d="M-160 44c30 0 
+                       58-18 88-18s
+                       58 18 88 18 
+                       58-18 88-18 
+                       58 18 88 18
+                       v44h-352z" />
+                     </defs>
+                       <g class="parallax4">
+                      <use xlink:href="#gentle-wave" x="50" y="6" />  
+                     </g>
+            </svg></div>
+         <!-- how you can help box -->
+         <section id="how-to-help" class="bg-pink column section-pad full-height">
+         <br><br>
+         <h2 id="help-title" class="sect-title margin-bottom-20 text-center color-white">How you can help...</h2>
+         <helpcomp></helpcomp>
+         </section>
+
+                  <!-- anim SVG start (above news and events section)-->
+                  <div class="svg-section flip bg-blue">
+                     <svg class="editorial svg-flip fill-pink"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     viewBox="0 24 150 28 "
+                     preserveAspectRatio="none">
+                 <defs>
+                 <path id="gentle-wave"
+                 d="M-160 44c30 0 
+                    58-18 88-18s
+                    58 18 88 18 
+                    58-18 88-18 
+                    58 18 88 18
+                    v44h-352z" />
+                  </defs>
+                    <g class="parallax4">
+                   <use xlink:href="#gentle-wave" x="50" y="6" />  
+                  </g>
+                  </svg></div>
+
+         <!-- subscribe withj email box-->
+         <section id="subscribe-box" class=" color-black bg-blue section-pad column">
+            <tickercomp></tickercomp>
+         </section>
+
+         <div class="emailBox bg-green">
+          <subscribecomp></subscribecomp>
+         </div>
+
+         <!-- <div class="svg-section spikes spikes-blue bg-white"></div> -->
+
+
+         <!-- anim SVG start (below news section) -->
+   
+         <!-- social media/ subscribe -->
+         <videoblockcomp></videoblockcomp>
+
+
+         <!-- anim SVG start (above crisis section)-->
+         <div class="svg-section flip bg-yellow">
+            <svg class="editorial svg-flip fill-white"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28 "
+            preserveAspectRatio="none">
+        <defs>
+        <path id="gentle-wave"
+        d="M-160 44c30 0 
+           58-18 88-18s
+           58 18 88 18 
+           58-18 88-18 
+           58 18 88 18
+           v44h-352z" />
+         </defs>
+           <g class="parallax4">
+          <use xlink:href="#gentle-wave" x="50" y="6" />  
+         </g>
+         </svg></div>
+
+         <section id="crisis-box" class="bg-yellow">
+         <crisiscomp></crisiscomp>
+    </section>
+
+         <!-- pointy divider after roadmaps -->
+         <!-- <div class="svgWrapper">
+                     <svg class="svgBg fill-blue bg-dark" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 118" preserveAspectRatio="none">
+                        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+                    </svg>
+         </div> -->
+
+
+
+
+         <svg class="editorial fill-dark"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 24 150 28 "
+         preserveAspectRatio="none">
+     <defs>
+     <path id="gentle-wave"
+     d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z" />
+      </defs>
+      <g class="parallax1">
+       <use xlink:href="#gentle-wave" x="50" y="3" fill="#479a9e"/>
+      </g>
+        <g class="parallax2">
+       <use xlink:href="#gentle-wave" x="50" y="0" fill="#eb745e"/>
+        </g>
+          <g class="parallax3">
+       <use xlink:href="#gentle-wave" x="50" y="9" fill="#fac650"/>
+       </g>
+        <g class="parallax4">
+       <use xlink:href="#gentle-wave" x="50" y="6" fill=""/>  
+      </g>
+            </svg>
+        <!-- end main content block --></div>
+        
+        <footercomp></footercomp>
+
+</div><!-- end vue app -->
+</body>
+</html>

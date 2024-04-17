@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>About | Foundation Sixty6</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato%7CRaleway" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script type="module" src="js/main.js"></script>
+</head>
+
+
+<body data-page="about" id="about">
+    <div class="main-wrapper" id="app">
+        <topbuttoncomp></topbuttoncomp>
+
+
+    <header>
+
+        <headercomp></headercomp>
+
+        <div class="hero-box"
+        :style="{ 'background-size': backgroundImageSize,'background-position': `center ${backgroundPositionY}`, opacity: backgroundOpacity }"
+
+        >
+            <div class="hero-sub">
+
+            <div class="media-block">
+                <img src="resources/svg/logo.svg"/>
+                <h2>About Us</h2>
+            </div>
+
+            <div class="text-block">
+                <p>
+                    Learn about our offerings, and how we can help you.
+                </p>            
+            </div>
+
+
+        </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <div id="main-content" class="main-content-block">
+
+        <aboutcardscomp></aboutcardscomp>                        
+        <!-- <div class="svg-section sect-absolute bg-green">
+            <svg class="editorial fill-pink"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28 "
+            preserveAspectRatio="none">
+        <defs>
+        <path id="gentle-wave"
+        d="M-160 44c30 0 
+           58-18 88-18s
+           58 18 88 18 
+           58-18 88-18 
+           58 18 88 18
+           v44h-352z" />
+         </defs>
+           <g class="parallax4">
+          <use xlink:href="#gentle-wave" x="50" y="6" />  
+         </g>
+        </svg></div> -->
+
+
+                        
+        <roadmapcomp></roadmapcomp>
+
+        <div class="svg-section flip bg-green">
+            <svg class="editorial svg-flip fill-pink"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28 "
+            preserveAspectRatio="none">
+        <defs>
+        <path id="gentle-wave"
+        d="M-160 44c30 0 
+           58-18 88-18s
+           58 18 88 18 
+           58-18 88-18 
+           58 18 88 18
+           v44h-352z" />
+         </defs>
+           <g class="parallax4">
+          <use xlink:href="#gentle-wave" x="50" y="6" />  
+         </g>
+        </svg></div>
+
+        <merchcomp></merchcomp>
+
+        
+
+
+
+        <svg class="editorial fill-dark"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 "
+        preserveAspectRatio="none">
+    <defs>
+    <path id="gentle-wave"
+    d="M-160 44c30 0 
+       58-18 88-18s
+       58 18 88 18 
+       58-18 88-18 
+       58 18 88 18
+       v44h-352z" />
+     </defs>
+     <g class="parallax1">
+      <use xlink:href="#gentle-wave" x="50" y="3" fill="#479a9e"/>
+     </g>
+       <g class="parallax2">
+      <use xlink:href="#gentle-wave" x="50" y="0" fill="#eb745e"/>
+       </g>
+         <g class="parallax3">
+      <use xlink:href="#gentle-wave" x="50" y="9" fill="#fac650"/>
+      </g>
+       <g class="parallax4">
+      <use xlink:href="#gentle-wave" x="50" y="6" fill=""/>  
+     </g>
+           </svg>
+        </div>
+        <footercomp></footercomp>
+
+</div>
+</body>
+</html>

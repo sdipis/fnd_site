@@ -1,0 +1,82 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .5s ease; /* Apply transition properties for both entering and leaving */
+}
+
+.fade-leave-to {
+  transform: translateY(100%) scaleX(0);
+
+}
+
+
+.fade-enter-from{
+  transform: translateY(-100%) scaleX(0);
+
+}
+
+
+  .menu-enter-active {
+    transition: all .3s ease;
+  }
+  .menu-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  
+    
+    .menu-leave-to, .menu-enter {
+      transform: translateY(-100%);
+      opacity:0;
+    }
+
+
+    .contact-enter-active {
+      transition: all .3s ease;
+    }
+    .contact-leave-active {
+      transform:scale(.1)
+    }
+    
+      
+      .contact-leave-to {
+        transform: scaleY(0);
+      }
+      .contact-enter-from{
+        transform: scaleY(0);
+      }
+
+
+
+
+      .brick-enter-active {
+        transition: all .3s ease;
+      }
+      // .brick-leave-active {
+      //   transform:scale(.1)
+      // }
+      
+        
+        .brick-leave-to, .brick-enter-from {
+          transform: scaleY(.1) rotate(90deg) translateY(-200px) translateX(-200px);
+          opacity:0;
+        }
+
+
+
+
+
+        //contact form transition
+        .formSwitch-enter-active {
+          transition: transform .25s ease-in;
+          // transform-origin: top center;
+        }
+        // .formSwitch-leave-active {
+        //   transform:scale(.1)
+        // }
+        
+          
+          .formSwitch-leave-to,
+          .formSwitch-enter-from{
+            transform: translateX(200px);
+            // border-radius: 100%;
+
+          }

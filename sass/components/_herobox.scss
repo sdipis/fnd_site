@@ -1,0 +1,194 @@
+@use '../abstracts' as a;
+
+#home .hero-box{background-image: url('../resources/hero/home.png');}
+#about .hero-box{background-image: url('../resources/hero/hero_sb.png');}
+#contact .hero-box{background-image: url('../resources/hero/hero_bike.png');}
+#news .hero-box{background-image: url('../resources/hero/hero_roof.png');}
+
+.hero-box{
+    max-height:100vh;
+    height:100vh !important;
+    width:100vw;
+    background-color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    z-index:6;
+    // background-image: url('../resources/images/hero/home.jpg');
+    background-size: 100% auto;
+    // background-size: fill;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: scroll !important;
+    // position: relative;
+    // &:before{
+    //     content:'';
+    //     height:100%;
+    //     width:100%;
+    //     position: absolute;
+    //     top:0px;
+    //     left:0px;
+    //     background-color: rgba(255, 255, 255, 0.5);
+    // }
+    // animation: fadeInRight 1s ease-in-out;
+
+}
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.hero-buttons{
+    display: flex;
+    flex-flow: row;
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    max-width: 50%;
+    justify-content: space-between;
+    li{
+        white-space: nowrap;
+        a span{
+            font-size: clamp(.85rem, 1vw, 2.5rem) !important;
+        }
+        
+    }
+
+    li:nth-child(1){
+        a{
+            &:after{
+            background-color: a.$pink;
+            }
+        }
+    }
+    li:nth-child(2){
+        a{
+            background-color: transparent !important;
+
+            &:after{
+            background-color: a.$lightblue;
+            }
+        }
+    }
+}
+
+.hero-box .hero-sub{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 60vw;
+    .media-block{
+        flex:1 0 100%;
+        max-width: 100%;
+        position: relative;
+        img{
+            height:auto;
+        }
+        h2{
+            position: absolute;
+            bottom:20px;
+            left:0px;
+        }
+    }
+    .text-block{
+        flex:1 0 50%;
+        max-width: 50%;
+        width: fit-content;
+        border-left:5px solid a.$black;
+        font-weight: bold;
+        padding-left:20px;
+        p{
+            line-height: 150%;
+            span{
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .hero-box{
+        background-size: auto 100% !important;
+    }
+    
+    .hero-box .hero-sub{
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        width: fit-content;
+        height:auto;
+        .media-block{
+            flex:1 0 100%;
+            max-width: 100%;
+            position: relative;
+            img{
+                width:80vw;
+            }
+            h2{
+                position: absolute;
+                bottom:10px;
+                left:0px;
+            }
+        }
+        .text-block{
+            border-left:5px solid a.$black;
+            flex:1 0 100%;
+            max-width: 100%;
+            width: fit-content;
+            margin-left:0px;
+            margin-top: 20px;
+            max-width: 80%;
+            p{
+                line-height: 150%;
+                span{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .hero-buttons{
+        display: flex;
+        flex-flow: row wrap;
+        position: static;
+        left:0px;
+        bottom:-.75rem;
+        width: 100%;
+        justify-content: space-between;
+        display: none;
+    
+        li{
+            font-size: .75rem;
+            white-space: nowrap;
+            a span{
+                padding:10px 5px;        
+            }
+        }
+    
+        li:nth-child(1){
+            a{
+                &:after{
+                background-color: a.$pink;
+                }
+            }
+        }
+        li:nth-child(2){
+            a{
+                background-color: transparent !important;
+    
+                &:after{
+                background-color: a.$lightblue;
+                }
+            }
+        }
+    }
+    
+
+}
+

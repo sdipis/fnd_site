@@ -1,0 +1,126 @@
+@use '../abstracts' as a;
+
+body {
+	font-family: a.$main-font;
+	// padding: 20px;
+}
+
+
+#crisis-box{
+	div{
+		text-align: center;
+		font-weight: normal;
+		h2{
+			font-weight: bold;
+			font-size: clamp(1rem, 2.5vw, 2rem) !important;
+
+		}
+	}
+}
+
+#help-title{
+	margin-top:40px;
+}
+
+#subscribe-box{
+	height:fit-content;
+	min-height: none;
+	max-height:fit-content;
+
+}
+
+.emailBox{
+	padding:40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.subscribe-box{
+	display: flex;
+	padding:0px 0px;
+	align-items: center;
+	margin-bottom: 20px;
+	position: relative;
+
+	.subscribe-aside{
+		flex:1 0 50%;
+		max-width: 50%;
+		text-align: justify;
+		padding-left:20px;
+		border-left:2px solid a.$black;
+		margin-left:20px;
+		h2{
+			margin-bottom: 10px;
+		}
+		p{
+			max-width: 80%;
+		}
+
+	}
+
+	.subscribe-form{
+		flex:1 0 50%;
+		max-width: 50%;
+		input[type=text]{
+			font-size: 1rem;
+			padding:20px;
+			border:none;
+			width:100%;
+			box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.229);
+			margin-bottom: 40px;
+			&::placeholder{
+				font-size: auto;
+			}
+		}
+		a{
+			width:50%;
+			float:right;
+			position: absolute;
+			left:0px;
+			bottom:0px;
+		}
+	
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+
+	.subscribe-box{
+		display: flex;
+		flex-flow: column-reverse;
+		padding:0px 0px;
+		align-items: center;
+		margin-bottom: 20px;
+		height:auto;
+	
+		.subscribe-aside{
+			flex:1 0 100%;
+			max-width: 100%;
+			margin-bottom: 40px;
+		}
+	
+		.subscribe-form{
+			flex:1 0 100% !important;
+			max-width: 100% !important;
+			width:100%;
+			a{
+				width:fit-content;
+				left:auto !important;
+				right:10px !important;
+				bottom:10px !important;
+				
+			}
+			input[type=text]{
+				width:100% !important;
+				max-width: 100%;
+				width:100%;
+				margin-bottom: 0px !important;
+			}
+		}
+
+
+		
+		}
+	}

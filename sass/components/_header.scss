@@ -1,0 +1,133 @@
+@use '../abstracts' as a;
+
+.header-wrapper{
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  .hero-box{
+    flex:1 0 60% !important;
+    max-width: 60%;
+    height:100vh;
+    .hero-sub{
+      width:auto;
+      .media-block{
+        max-width: 100%;
+        height:fit-content;
+        img{
+          width:100%;
+          padding:0px;
+          margin:0px;
+        }
+      }
+    }
+  }
+
+  .formsMainWrapper{
+    flex:1;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
+    height:100vh;
+    background-color: red;
+
+    .forms-container{
+      height:fit-content;
+      display: flex;
+      padding:0px;
+      margin:0px;
+      padding-bottom:80px;
+      .form-int-wrapper{
+        flex:1;
+        height:auto;
+        align-self: center;
+      }
+  }
+}
+  }
+header{
+  position: relative;
+}
+#home .top-bar .mainNav li:nth-child(1),
+#about .top-bar .mainNav li:nth-child(2),
+#contact .top-bar .mainNav li:nth-child(3),
+#news .top-bar .mainNav li:nth-child(4),
+#services .top-bar .mainNav li:nth-child(5)
+{
+  transition:.2s;
+  span{text-decoration: underline;
+    text-underline-position: under;
+  }
+  
+  &:hover{
+    border:none;
+  }
+}
+
+
+
+.top-bar{
+    display: flex;
+    height:fit-content;
+    width:100vw;
+    align-items: center;
+    justify-content: space-between;
+    // box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.304);
+    position: absolute !important;
+    top:20px;
+    left:0px;
+    .mainNav{
+            list-style-type: none;
+            display:flex;
+            // justify-content: space-between;
+            align-items: center;
+            font-family:a.$main-font;
+            text-transform: uppercase;
+            z-index: 2;
+            margin:0 auto;
+            flex:1;
+            text-align: center;
+            font-size: clamp(.5rem,2.5vw,.85rem);
+            li:nth-child(1){.fnd-button:after{background-color: a.$darkblue;}}
+            li:nth-child(2){.fnd-button:after{background-color: a.$blue;}}
+            li:nth-child(3){.fnd-button:after{background-color: a.$lightpink;}}
+            li:nth-child(4){.fnd-button:after{background-color: a.$pink;}}
+            li:nth-child(5){.fnd-button:after{background-color: a.$lightblue;}}
+    }
+    position: relative;
+    .logoLink{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      
+      img{
+        width:50%;
+      }
+    }
+}
+
+.logo-1 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+}
+
+.logo-2 {
+  fill: #e87c84;
+  stroke-width: 0px;
+}
+
+    
+    
+
+    @media only screen and (max-width: 1200px) {
+      
+      .top-bar{
+        .logoLink{
+          margin-left:0px;
+        }
+      }
+    }

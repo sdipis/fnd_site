@@ -1,0 +1,284 @@
+.bookList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    
+}
+
+.book{
+    grid-column: span 1;
+    display: flex;
+    flex-flow: column; 
+    margin-bottom:-2px;
+    align-items: center;
+}
+
+.span-1{grid-column: span 1;}
+.span-2{grid-column: span 2;}
+.span-3{grid-column: span 3;}
+.span-4{grid-column: span 4 !important;}
+
+.design{grid-column: span 1;}
+.design-mid{grid-column: span 2;}
+.design-large{grid-column: span 3;}
+.design-wide{grid-column: span 4;}
+
+
+.closeSvg{
+    fill:red;
+    position: absolute;
+    top:20px;
+    right:20px;
+    height:60px;
+}
+.lightbox{
+    display: flex;
+    position: fixed;
+    right:0px;
+    bottom:0px;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+    height:100vh;
+    width:100vw;
+    background-color: white;
+    
+    padding:0px;
+    margin:0px;
+    .lightboxImage{
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        max-height:100vh;
+        overflow-y: scroll;
+        img{
+            max-height:500px;
+            max-width: none;
+            // max-height:none;
+            object-fit: cover;
+        }
+    }
+    .lightboxText{
+        flex:1 0 30%;
+        padding:20px;
+        max-width: 30%;
+        overflow-y: scroll;
+        max-height:100%;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        h2{
+            font-size: 2rem;
+            line-height:2.25rem;
+        }
+        p{
+            line-height:1.25rem;
+            font-size: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lightbox{
+        flex-flow: column;
+     .lightboxText{
+        padding:20px;
+        max-width: none;
+     }
+    }
+    }
+
+
+
+
+
+
+.logo-svg{
+    overflow: visible;
+}
+
+    .logo-yellow {
+        fill: #fac650;
+      }
+
+      .logo-yellow, .logo-dark, .logo-black, .logo-blue, .logo-pink, .logo-green {
+        stroke-width: 0px;
+      }
+
+      .logo-dark {
+        fill: #165055;
+      }
+
+      .logo-black {
+        fill: #000;
+      }
+
+      .logo-blue {
+        fill: #479a9e;
+      }
+
+      .logo-pink {
+        fill: #eb745e;
+      }
+
+      .logo-green {
+        fill: #5db74e;
+      }
+
+
+      .logo-yellow, .logo-pink, .logo-green, .logo-blue, .logo-dark {
+        opacity: 0;
+        transform: translateY(-100vh);
+
+      }
+
+      .logo-yellow{
+        animation: dropIn-yellow
+        .5s .5s ease forwards
+        ;
+      }
+      .logo-pink{
+        animation: dropIn-pink .5s .6s ease forwards;
+        
+      }
+      .logo-green{
+        animation: dropIn-green .5s .7s ease forwards;
+      }
+      .logo-blue{
+        animation: dropIn-blue .5s .8s ease forwards;
+      }
+      .logo-dark{
+        animation: dropIn-dark .5s .9s ease forwards;
+      }
+      
+    //   .logo-pink { animation-delay: 0.1s; }
+    //   .logo-green { animation-delay: 0.2s; }
+    //   .logo-blue { animation-delay: 0.3s; }
+    //   .logo-dark { animation-delay: 0.4s; }
+      
+
+//yellow
+
+      @keyframes dropIn-yellow{
+        from {
+        //   opacity: 0;
+            transform:translatey(-200vh);
+          d:path("M156.24,67.14h200v1200h-200v-81.9Z");
+
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+          d: path("M156.24,67.14h38.95v16.38h-38.95v-16.38Z");
+        }
+      }
+
+      //pink
+      @keyframes dropIn-pink{
+        from{
+        //   opacity: 0;
+            transform:translatey(-200vh);
+          d: path("M117.29,67.14h200v1200h-200v-98.28Z");
+
+        }
+        to{
+          opacity: 1;
+          transform: translateY(0);
+          d: path("M117.29,67.14h38.95v16.38h-38.95v-16.38Z");
+
+        }
+      }
+
+
+      //green
+      @keyframes dropIn-green{
+        from{
+        //   opacity: 0;
+            transform:translatey(-200vh);
+          d: path("M78.34,67.14h200v1200h-200v-98.28Z");
+
+        }
+        to{
+          opacity: 1;
+          transform: translateY(0);
+          d: path("M78.34,67.14h38.95v16.38h-38.95v-16.38Z");
+        }
+      }
+
+      //      
+      @keyframes dropIn-blue{
+        from{
+            // opacity: 0;
+            transform:translatey(-200vh);
+              d: path("M39.38,67.14h200v1200h-200v-98.28Z");
+
+            
+          }
+          to{
+            opacity: 1;
+            transform: translateY(0);
+            d: path("M39.38,67.14h38.95v16.38h-38.95v-16.38Z");
+
+          }
+        }
+        //dark
+
+        @keyframes dropIn-dark{
+            from{
+            //   opacity: 0;
+                transform:translatey(-200vh);
+                  d: path("M.43,67.14h200v1200h-200v-98.28Z");
+
+            }
+            to{
+              opacity: 1;
+              transform: translateY(0);
+              d: path("M.43,67.14h38.95v16.38H.43v-16.38Z");
+
+            }
+          }
+
+          //logo fade in
+
+          @keyframes logo-fade{
+            from {
+              opacity: 0;
+    
+            }
+            to {
+              opacity: 1;
+            }
+          }
+
+
+          .color-blocks{
+            height:100vh;
+            width:100vw;
+            display: flex;
+            position: fixed;
+            flex-flow: row-reverse;
+            left:0px;
+            top:0px;
+            z-index: 99;
+            
+            &>.yellow{flex:1; height:100vh; background-color: #fac650;}
+            &>.pink{flex:1; height:100vh; background-color: #eb745e;}
+            &>.green{flex:1; height:100vh; background-color: #5db74e;}
+            &>.blue{flex:1; height:100vh; background-color: #479a9e;}
+            &>.dark{flex:1; height:100vh; background-color: #165055;}
+
+          }
+
+          .color-blocks > div {
+            animation: animateOff 1s ease forwards;
+            opacity: 1;
+          }
+          
+          .color-blocks > .pink { animation-delay: 0.1s; }
+          .color-blocks > .green { animation-delay: 0.2s; }
+          .color-blocks > .blue { animation-delay: 0.3s; }
+          .color-blocks > .dark { animation-delay: 0.4s; }
+
+          @keyframes animateOff {
+            from { transform: translatey(0); }
+            to { transform: translateY(-100%);opacity:0; }
+          }

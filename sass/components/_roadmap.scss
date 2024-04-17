@@ -1,0 +1,96 @@
+@use '../abstracts' as a;
+#roadmap{
+    display: flex;
+    flex-flow: row;
+    img{
+        width:80%;
+    }
+    .roadmap-container{
+        padding:20px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height:fit-content;
+        max-height: none;
+        flex:1 0 60%;
+        max-width: 60%;
+        h2{
+            color:a.$white;
+        }
+        h2:first-child{
+            margin-bottom:20px;
+        }
+        h2:last-child{
+            margin-top:20px;
+        }
+        .map-blurb{
+            background-color: a.$white;
+            width:100%;
+            text-align: left;
+            padding:10px 20px;
+            border-left:10px solid a.$lightblue;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            margin-bottom:20px;
+            svg{
+                fill:a.$lightpink;
+                margin-right:10px;
+                flex:1 0 5%;
+                max-width: 5%;
+            }
+    
+        }
+    }
+    
+    .roadmap-description{
+        display: flex;
+        flex-flow: column;
+        flex:1 0 40%;
+        max-width: 40%;
+        align-items: center;
+        div{
+            padding:10px;
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+        }
+    }
+}
+
+.roadmap-2{
+    .map-blurb{
+        border-right:10px solid a.$lightpink !important;
+        border-left:none !important;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    #roadmap{
+        flex-flow:column;
+        .roadmap-container{
+            flex:1 0 100%;
+            max-width: 100%;
+            padding:0px;
+            margin:0px;
+        }
+        .roadmap-description{
+            flex:1 0 100%;
+            max-width: 100%;
+            h2{
+                width:100%;
+    
+            }
+        }
+    }
+
+
+
+
+    .roadmap-2{
+    flex-flow: column-reverse !important; 
+    }
+
+}
